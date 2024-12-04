@@ -1,44 +1,27 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 
-const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    component: () => import('@/components/AppLayout.vue'),
-    children: [
-      {
-        path: '',
-        name: 'dashboard',
-        component: DashboardView,
-        meta: {
-          title: 'Dashboard'
-        }
-      },
-      {
-        path: 'projects',
-        name: 'projects',
-        component: ProjectsView,
-        meta: {
-          title: 'Projects'
-        }
-      },
-      {
-        path: 'projects/:id',
-        name: 'project-details',
-        component: () => import('@/views/ProjectDetailsView.vue'),
-        meta: {
-          title: 'Project Details'
-        }
-      }
-    ]
-  }
-]
-
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes
+  history: createWebHashHistory('https://grzesiek90.github.io/TaskFlow/'),
+  routes: [
+    {
+      path: '/',
+      name: 'dashboard',
+      component: DashboardView,
+      meta: {
+        title: 'Dashboard'
+      }
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: ProjectsView,
+      meta: {
+        title: 'Projects'
+      }
+    }
+  ]
 })
 
 // Update document title
