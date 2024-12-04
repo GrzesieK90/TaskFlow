@@ -1,5 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
+import DashboardView from '../views/DashboardView.vue'
+import ProjectsView from '../views/ProjectsView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -9,7 +11,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'dashboard',
-        component: () => import('@/views/DashboardView.vue'),
+        component: DashboardView,
         meta: {
           title: 'Dashboard'
         }
@@ -17,7 +19,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'projects',
         name: 'projects',
-        component: () => import('@/views/ProjectsView.vue'),
+        component: ProjectsView,
         meta: {
           title: 'Projects'
         }
@@ -35,7 +37,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes
 })
 
