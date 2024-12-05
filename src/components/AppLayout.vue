@@ -45,8 +45,8 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .nav-content {
+  width: 100%;
   max-width: 1920px;
-  min-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
   height: 100%;
@@ -89,12 +89,47 @@ import { RouterLink, RouterView } from 'vue-router'
   margin-top: 60px;
   flex: 1;
   background-color: var(--bg-color);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-@media (min-width: 1024px) and (max-width: 1920px) {
+/* Media queries dla responsywności */
+@media (max-width: 768px) {
   .nav-content {
-    width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-content {
+    padding: 0 5px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .nav-link {
+    padding: 4px 6px;
+    font-size: 0.8rem;
   }
 }
 </style>
