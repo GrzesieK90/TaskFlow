@@ -1,74 +1,39 @@
-# TaskFlow Vue
+# package.json
 
-A modern task management application built with Vue.js 3 and TypeScript, designed to help users organize and track their tasks efficiently.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Features
+## Recommended IDE Setup
 
-- Task creation and management
-- Intuitive drag-and-drop interface
-- Task categorization and organization
-- Responsive design for all devices
-- State management with Pinia
-- Type-safe development with TypeScript
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Technologies Used
+## Type Support for `.vue` Imports in TS
 
-- **Vue.js 3**: Frontend framework with Composition API
-- **TypeScript**: For type-safe development
-- **Pinia**: State management solution
-- **Vue Router**: For application routing
-- **Vite**: Build tool and development server
-- **Lodash-ES**: Utility functions
-- **ESLint & Prettier**: Code quality and formatting
-- **UUID**: For generating unique identifiers
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
-```bash
-# Install dependencies
+```sh
 npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
 
-## Development
+### Compile and Hot-Reload for Development
 
-The project follows modern Vue.js best practices:
+```sh
+npm run dev
+```
 
-- Component-based architecture
-- Type-safe development with TypeScript
-- State management using Pinia stores
-- Vue Router for navigation
-- ESLint and Prettier for code quality
+### Type-Check, Compile and Minify for Production
 
-## Project Structure
+```sh
+npm run build
+```
 
-- `/src/components`: Reusable Vue components
-- `/src/views`: Page components
-- `/src/stores`: Pinia state management stores
-- `/src/router`: Vue Router configuration
-- `/src/types`: TypeScript type definitions
-- `/src/assets`: Static assets
+### Lint with [ESLint](https://eslint.org/)
 
-## Scripts
-
-- `npm run dev`: Start development server
-- `npm run build`: Build for production
-- `npm run preview`: Preview production build
-- `npm run type-check`: Run TypeScript type checking
-- `npm run lint`: Run ESLint
-- `npm run format`: Format code with Prettier
-
-## Requirements
-
-- Node.js 18 or higher
-- npm or yarn package manager
-
-# TaskFlow Vue
+```sh
+npm run lint
+```

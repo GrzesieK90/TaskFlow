@@ -96,6 +96,7 @@ const restoreFromHistory = (timestamp: string) => {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   margin: 1rem 0;
+  width: 68vw;
 }
 
 .backup-info {
