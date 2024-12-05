@@ -1,44 +1,44 @@
 {
-  "name": "taskflow-vue",
-  "version": "0.1.0",
+  "name": "taskflow",
+  "version": "0.0.0",
+  "homepage": "https://grzesiek90.github.io/TaskFlow/",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vite build",
     "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@types/lodash-es": "^4.17.12",
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
-    "vue": "^3.3.11",
+    "uuid": "^9.0.1",
+    "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",
     "@tsconfig/node18": "^18.2.2",
-    "@types/node": "^18.19.3",
-    "@types/uuid": "^10.0.0",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@types/node": "^18.18.5",
+    "@types/lodash-es": "^4.17.12",
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-vue": "^4.4.0",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "gh-pages": "^6.1.0",
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.0.3",
-    "typescript": "~5.3.0",
-    "uuid": "^11.0.3",
-    "vite": "^5.0.10",
-    "vue-tsc": "^2.0.0"
-  },
-  "resolutions": {
-    "vue-template-compiler": "^2.7.14",
-    "@vue/language-core": "^2.0.0"
+    "typescript": "~5.2.0",
+    "vite": "^4.4.11",
+    "vue-tsc": "^2.1.10"
   }
 }
